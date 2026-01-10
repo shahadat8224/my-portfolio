@@ -314,4 +314,34 @@ window.addEventListener('DOMContentLoaded', () => {
     }, 4000);
 });
 
+// Mobile Menu Toggle
+const menuBtn = document.getElementById('mobileMenuBtn');
+const navMenu = document.getElementById('mobileNav');
 
+menuBtn?.addEventListener('click', () => {
+    navMenu.classList.toggle('hidden');
+    navMenu.classList.toggle('flex');
+});
+
+// Welcome Bubble Timing (4 seconds)
+window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+        const bubble = document.getElementById('welcome-bubble');
+        if (bubble) bubble.classList.add('show');
+    }, 4000);
+});
+
+// Toggle Chat & Close Bubble
+function toggleChat() {
+    const chat = document.getElementById('chat-window');
+    const bubble = document.getElementById('welcome-bubble');
+    if (bubble) bubble.classList.remove('show');
+    
+    if (chat.style.display === 'none' || chat.style.display === '') {
+        chat.style.display = 'flex';
+    } else {
+        chat.style.display = 'none';
+    }
+}
+
+// ... (And your sendToGemini function goes here too)
