@@ -16,71 +16,43 @@
 
     <div class="loading-bar" id="loadingBar"></div>
 
-    <nav class="sticky top-0 z-50 glass-card py-4 slide-in-up">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold text-white hover:text-sky-400 transition-all duration-300 transform hover:scale-105">
-                Shahadat<span class="text-gradient-animate">Alif</span>
-            </a>
-            <div class="desktop-nav flex space-x-8">
-                <a href="#home" class="hover:text-sky-400 transition-all duration-300 transform hover:scale-110 relative group">
-                    Home
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-sky-400 group-hover:w-full transition-all duration-300"></span>
-                </a>
-                <a href="#about" class="hover:text-sky-400 transition-all duration-300 transform hover:scale-110 relative group">
-                    About
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-sky-400 group-hover:w-full transition-all duration-300"></span>
-                </a>
-                <a href="#experience" class="hover:text-sky-400 transition-all duration-300 transform hover:scale-110 relative group">
-                    Experience
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-sky-400 group-hover:w-full transition-all duration-300"></span>
-                </a>
-                <a href="#skills" class="hover:text-sky-400 transition-all duration-300 transform hover:scale-110 relative group">
-                    Skills
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-sky-400 group-hover:w-full transition-all duration-300"></span>
-                </a>
-                <a href="#education" class="hover:text-sky-400 transition-all duration-300 transform hover:scale-110 relative group">
-                    Education
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-sky-400 group-hover:w-full transition-all duration-300"></span>
-                </a>
-                <a href="#personal" class="hover:text-sky-400 transition-all duration-300 transform hover:scale-110 relative group">
-                    Personal
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-sky-400 group-hover:w-full transition-all duration-300"></span>
-                </a>
-                <a href="#references" class="hover:text-sky-400 transition-all duration-300 transform hover:scale-110 relative group">
-                    References
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-sky-400 group-hover:w-full transition-all duration-300"></span>
-                </a>
-                <a href="#contact" class="hover:text-sky-400 transition-all duration-300 transform hover:scale-110 relative group">
-                    Contact
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-sky-400 group-hover:w-full transition-all duration-300"></span>
-                </a>
-            </div>
-            
-            <button onclick="toggleChat()" class="bg-gradient-to-r from-sky-600 to-purple-600 hover:from-sky-700 hover:to-purple-700 text-white px-3 py-2 rounded-lg transition-all duration-300 font-medium btn-hover transform hover:scale-105 hover:shadow-lg hover:shadow-sky-500/30 flex items-center">
-                <i class="fas fa-robot mr-2"></i><span class="hidden sm:inline">AI Chat ✨</span>
-            </button>
+    <nav class="sticky top-0 z-50 glass-card py-3 px-4 md:px-8 h-16 flex items-center justify-between">
+    <a href="#" class="text-xl font-bold text-white transition-all duration-300 transform hover:scale-105">
+        Shahadat<span class="text-gradient-animate">Alif</span>
+    </a>
 
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-ellipsis-v"></i>
-            </button>
-        </div>
-        
-        <div class="mobile-nav" id="mobileNav">
-            <div class="flex flex-col p-4 space-y-2">
-                <a href="#home" class="hover:text-sky-400 py-3 px-4 rounded-xl hover:bg-sky-500/10"><i class="fas fa-home mr-3"></i>Home</a>
-                <a href="#about" class="hover:text-sky-400 py-3 px-4 rounded-xl hover:bg-sky-500/10"><i class="fas fa-user-tie mr-3"></i>About</a>
-                <a href="#experience" class="hover:text-sky-400 py-3 px-4 rounded-xl hover:bg-sky-500/10"><i class="fas fa-briefcase mr-3"></i>Experience</a>
-                <a href="#skills" class="hover:text-sky-400 py-3 px-4 rounded-xl hover:bg-sky-500/10"><i class="fas fa-tools mr-3"></i>Skills</a>
-                <a href="#education" class="hover:text-sky-400 py-3 px-4 rounded-xl hover:bg-sky-500/10"><i class="fas fa-graduation-cap mr-3"></i>Education</a>
-                <a href="#personal" class="hover:text-sky-400 py-3 px-4 rounded-xl hover:bg-sky-500/10"><i class="fas fa-user-circle mr-3"></i>Personal</a>
-                <a href="#references" class="hover:text-sky-400 py-3 px-4 rounded-xl hover:bg-sky-500/10"><i class="fas fa-users mr-3"></i>References</a>
-                <a href="#contact" class="hover:text-sky-400 py-3 px-4 rounded-xl hover:bg-sky-500/10"><i class="fas fa-envelope mr-3"></i>Contact</a>
-                <button onclick="toggleChat()" class="bg-gradient-to-r from-sky-600 to-purple-600 text-white px-4 py-3 rounded-xl mt-4">
-                    <i class="fas fa-robot mr-2"></i>AI Chat
-                </button>
-            </div>
-        </div>
-    </nav>
+    <div class="hidden lg:flex space-x-8">
+        <a href="#home" class="hover:text-sky-400 transition-all duration-300 relative group text-sm">Home</a>
+        <a href="#about" class="hover:text-sky-400 transition-all duration-300 relative group text-sm">About</a>
+        <a href="#experience" class="hover:text-sky-400 transition-all duration-300 relative group text-sm">Experience</a>
+        <a href="#skills" class="hover:text-sky-400 transition-all duration-300 relative group text-sm">Skills</a>
+        <a href="#education" class="hover:text-sky-400 transition-all duration-300 relative group text-sm">Education</a>
+        <a href="#personal" class="hover:text-sky-400 transition-all duration-300 relative group text-sm">Personal</a>
+        <a href="#references" class="hover:text-sky-400 transition-all duration-300 relative group text-sm">References</a>
+        <a href="#contact" class="hover:text-sky-400 transition-all duration-300 relative group text-sm">Contact</a>
+    </div>
+    
+    <div class="flex items-center gap-3">
+        <button onclick="toggleChat()" class="ai-pill">
+            <i class="fas fa-robot mr-2"></i>AI Chat ✨
+        </button>
+
+        <button class="lg:hidden text-white" id="mobileMenuBtn">
+            <i class="fas fa-ellipsis-v"></i>
+        </button>
+    </div>
+
+    <div class="mobile-nav hidden absolute top-16 left-0 w-full bg-[#0f172a] border-b border-sky-500/20 flex-col p-4 space-y-2 z-40" id="mobileNav">
+        <a href="#home" class="hover:text-sky-400 py-2"><i class="fas fa-home mr-3"></i>Home</a>
+        <a href="#about" class="hover:text-sky-400 py-2"><i class="fas fa-user-tie mr-3"></i>About</a>
+        <a href="#experience" class="hover:text-sky-400 py-2"><i class="fas fa-briefcase mr-3"></i>Experience</a>
+        <a href="#contact" class="hover:text-sky-400 py-2"><i class="fas fa-envelope mr-3"></i>Contact</a>
+    </div>
+</nav>
+
+<div id="welcome-bubble" class="welcome-bubble">
+    Hi! I'm Alif's AI. Want to see his projects? ✨
+</div>
 
     <section id="home" class="min-h-screen gradient-bg flex flex-col justify-center items-center text-center px-6 pt-20 parallax-section">
         <div class="mb-8 p-2 rounded-full bg-gradient-to-r from-sky-500 to-blue-500 animate-pulse profile-photo-container floating">
@@ -261,3 +233,4 @@
 
 </body>
 </html>
+
