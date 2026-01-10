@@ -719,3 +719,33 @@ html, body {
 
 /* Prevent side scrolling on mobile */
 html, body { max-width: 100%; overflow-x: hidden; }
+
+/* Vivo AI Logo (The Glowing Orb) */
+.vivo-ai-logo {
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+    border-radius: 50%;
+    /* Vivo style cyan to purple gradient */
+    background: radial-gradient(circle at 30% 30%, #5eead4, #3b82f6, #a855f7);
+    display: inline-block;
+    position: relative;
+    box-shadow: 0 0 10px rgba(94, 234, 212, 0.7);
+    animation: vivo-glow 2.5s infinite ease-in-out;
+    vertical-align: middle;
+}
+
+/* Vivo Breathing Animation */
+@keyframes vivo-glow {
+    0%, 100% { 
+        transform: scale(1); 
+        opacity: 0.9; 
+        box-shadow: 0 0 10px rgba(94, 234, 212, 0.6);
+    }
+    50% { 
+        transform: scale(1.2); 
+        opacity: 1; 
+        box-shadow: 0 0 15px rgba(168, 85, 247, 0.9);
+    }
+}
+
