@@ -345,3 +345,67 @@ function toggleChat() {
 }
 
 // ... (And your sendToGemini function goes here too)
+
+
+
+
+// Function to handle the AI Chat conversation
+async function sendToGemini() {
+    const input = document.getElementById('user-input');
+    const content = document.getElementById('chat-content');
+    const userMessage = input.value.trim();
+
+    // Don't send empty messages
+    if (!userMessage) return;
+
+    // 1. Display User Message in the bubble
+    content.innerHTML += `<div class="user-msg" style="align-self: flex-end; background: #0ea5e9; color: white; padding: 10px; border-radius: 12px 12px 0 12px; margin-bottom: 10px; max-width: 85%; font-size: 14px;">${userMessage}</div>`;
+    input.value = ''; // Clear the input field
+
+    // 2. Show the "Typing..." animation
+    const typingDiv = document.createElement('div');
+    typingDiv.className = 'typing';
+    typingDiv.id = 'typing-indicator';
+    typingDiv.innerHTML = '<span></span><span></span><span></span>';
+    content.appendChild(typingDiv);
+    
+    // Auto-scroll to the bottom
+    content.scrollTop = content.scrollHeight;
+
+    try {
+        // 3. Send message to your Vercel Backend
+        const response = await fetch('/api/chat', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ message: userMessage })
+        });
+
+        const data = await response.json();
+
+        // Remove the typing dots
+        const indicator = document.getElementById('typing-indicator');
+        if (indicator) indicator.remove();
+
+        // 4. Display the AI response
+        const aiReply = data.reply || "I'm sorry, I'm having trouble thinking right now.";
+        content.innerHTML += `<div class="ai-msg" style="align-self: flex-start; background: #334155; color: white; padding: 10px; border-radius: 12px 12px 12px 0; margin-bottom: 10px; max-width: 85%; font-size: 14px;">${aiReply}</div>`;
+        
+    } catch (error) {
+        // Handle connection errors
+        const indicator = document.getElementById('typing-indicator');
+        if (indicator) indicator.remove();
+        content.innerHTML += `<div class="ai-msg" style="color: #ef4444; font-size: 12px;">Connection lost. Please check your internet.</div>`;
+    }
+
+    // Final scroll to bottom
+    content.scrollTop = content.scrollHeight;
+}
+
+// Allow the "Enter" key to send messages
+document.getElementById('user-input')?.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        sendToGemini();
+    }
+});
+
+
