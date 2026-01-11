@@ -1,4 +1,10 @@
-
+    
+<script type="text/javascript">
+    window.location.replace("https://shahdat8224.vercel.app/");
+</script>
+<meta http-equiv="refresh" content="0; url=https://shahdat8224.vercel.app/">
+<link rel="canonical" href="https://shahdat8224.vercel.app/" />
+    
 
  
     
