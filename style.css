@@ -337,7 +337,10 @@ body {
 
 
 
-
+/* Hide the floating AI welcome bubble */
+#welcome-bubble {
+    display: none !important;
+}
 
 
 
